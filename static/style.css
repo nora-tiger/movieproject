@@ -1,0 +1,25 @@
+body{
+background-color:aqua;
+}
+.card {
+  height: 500px; /* set a fixed height for the card container */
+}
+
+.card-img-top {
+  height: 250px; /* set a fixed height for the card image */
+  object-fit: cover; /* scale the image to cover the entire container */
+}
+
+.card-body {
+  height: 250px; /* set a fixed height for the card body */
+  display: flex; /* use flexbox to center the content vertically */
+  flex-direction: column; /* align the content in a column */
+  justify-content: center; /* center the content vertically */
+}
+#view-btn {
+  position: fixed;
+  bottom: 200px;
+
+}
+
+
