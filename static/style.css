@@ -1,25 +1,23 @@
 body{
 background-color:aqua;
 }
-.card {
-  height: 500px; /* set a fixed height for the card container */
-}
 
-.card-img-top {
-  height: 250px; /* set a fixed height for the card image */
-  object-fit: cover; /* scale the image to cover the entire container */
+.card {
+  position: relative; /* Set the container as a positioning context */
 }
 
 .card-body {
-  height: 250px; /* set a fixed height for the card body */
-  display: flex; /* use flexbox to center the content vertically */
-  flex-direction: column; /* align the content in a column */
-  justify-content: center; /* center the content vertically */
+  position: absolute; /* Position the card body relative to the container */
+  bottom: 0; /* Position it at the bottom of the container */
+  left: 0; /* Align it to the left of the container */
+  right: 0; /* Align it to the right of the container */
+  padding: 10px; /* Optional: Add padding to the card body */
+  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a background color with transparency */
 }
-#view-btn {
-  position: fixed;
-  bottom: 200px;
 
+.card-body .btn {
+  margin-top: 10px;
+   /* Optional: Add margin to the button */
 }
 
 
