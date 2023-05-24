@@ -1,23 +1,9 @@
 body{
 background-color:aqua;
 }
+.card-body{
 
-.card {
-  position: relative; /* Set the container as a positioning context */
 }
 
-.card-body {
-  position: absolute; /* Position the card body relative to the container */
-  bottom: 0; /* Position it at the bottom of the container */
-  left: 0; /* Align it to the left of the container */
-  right: 0; /* Align it to the right of the container */
-  padding: 10px; /* Optional: Add padding to the card body */
-  background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a background color with transparency */
-}
-
-.card-body .btn {
-  margin-top: 10px;
-   /* Optional: Add margin to the button */
-}
 
 
