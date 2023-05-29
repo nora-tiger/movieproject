@@ -40,11 +40,16 @@
     {% endfor %}
   </div>
 </div>-->
+
+
+
+
+<!--
 <div class="container">
-  <div class="row justify-content-center">
+  <div class="row justify-content-end">
     {% for i in movie_list %}
-    <div class="col-md-3 d-flex">
-      <div class="card flex-fill">
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
         <img src="{{ i.image.url }}" class="card-img-top" alt="...">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">{{ i.name }}</h5>
@@ -55,6 +60,32 @@
         </div>
       </div>
     </div>
+    {% if forloop.counter|divisibleby:4 and not forloop.last %}
+      </div><div class="row justify-content-end">
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>-->
+
+
+<div class="container">
+  <div class="row justify-content-start">
+    {% for i in movie_list %}
+    <div class="col-md-3 mb-4">
+      <div class="card h-100">
+        <img src="{{ i.image.url }}" class="card-img-top" alt="...">
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ i.name }}</h5>
+          <p class="card-text flex-grow-1">{{ i.desc }}</p>
+          <div class="mt-auto">
+            <a class="btn btn-warning" href="{% url 'movieapp:detail' i.id %}" id="view-btn">View Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% if forloop.counter|divisibleby:4 and not forloop.last %}
+      </div><div class="row justify-content-start">
+    {% endif %}
     {% endfor %}
   </div>
 </div>
